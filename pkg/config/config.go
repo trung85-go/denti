@@ -21,6 +21,14 @@ type Config struct {
 			Password string `default:"postgres"`
 			Database string `default:"denti"`
 		}
+		Mysql struct {
+			Enabled  bool   `default:"true"`
+			Host     string `default:"mysql"`
+			Port     string `default:"3306"`
+			UserName string `default:"mysql"`
+			Password string `default:"mysql"`
+			Database string `default:"denti"`
+		}
 	}
 	Contacts struct {
 		Name  string `default:"Akbar Shaikh"`

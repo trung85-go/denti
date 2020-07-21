@@ -6,13 +6,20 @@ logger:
     loglevel: debug
     filename: denti.log
 db:
-    use: postgres
+    use: mysql
     postgres:
         enabled: true
-        host: postgres
+        host: localhost
         port: 5432
-        userName: postgres
+        username: postgres
         password: postgres
+        database: denti
+    mysql:
+        enabled: true
+        host: localhost
+        port: 3306
+        username: root
+        password: 12345678
         database: denti
 contacts:
     name: 'Akbar Shaikh'

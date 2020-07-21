@@ -49,7 +49,7 @@ func (u *userCtrl) Store(ctx *gin.Context) {
 		return
 	}
 	u.svc.Store(&user)
-	ctx.Status(http.StatusCreated)
+	ctx.JSON(http.StatusCreated, gin.H{"data": user})
 }
 
 func (u *userCtrl) Update(ctx *gin.Context) {
@@ -66,7 +66,7 @@ func (u *userCtrl) Update(ctx *gin.Context) {
 	}
 	user.ID = id
 	u.svc.Update(&user)
-	ctx.Status(http.StatusOK)
+	ctx.JSON(http.StatusOK, gin.H{"data": user})
 }
 
 func (u *userCtrl) Delete(ctx *gin.Context) {
